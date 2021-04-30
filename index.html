@@ -13,7 +13,7 @@
 		<header>
 			<div class="container">
 				<div class="flex-header">
-					<i class="fas fa-gamepad icon-logo"></i>
+					<a href="index.html"><i class="fas fa-gamepad icon-logo"></i></a>
 					<button class="button-help">
 						<i class="far fa-question-circle icon"></i>
 						<i class="fas fa-question-circle icon-hover"></i>
@@ -22,39 +22,54 @@
 			</div>
 		</header>
 		<div class="container">
-			<div class="landing-page">
-				<h1 class="title">Kamień, papier, nożyce</h1>
-				<h2 class="subtitle">Witaj w grze!</h2>
-				<p>Jest to prosta gra oparta na JavaScript.</p>
-				<p>Kliknij przycisk "URUCHOM GRĘ" aby zacząć.<br>Aby wyświetlić instrukcje, kliknij <i class="far fa-question-circle icon-logo"></i> w prawym, górnym rogu.</p>
-				<button class="button-start">URUCHOM GRĘ</button>
-			</div>
-			<div class="game">
-				<div class="result" id="result">10 - 5</div>
-				<div class="messages" id="messages"></div>
-				<div id="buttons">
-					<button class="button-move" id="button-rock">
-						<i class="far fa-hand-rock icon"></i>
-						<i class="fas fa-hand-rock icon-hover "></i>
-					</button>
-					<button class="button-move" id="button-paper">
-						<i class="fa-hand-paper icon far "></i>
-						<i class="fas fa-hand-paper icon-hover "></i>
-					</button>
-					<button class="button-move" id="button-scissors">
-						<i class="far fa-hand-scissors icon"></i>
-						<i class="fas fa-hand-scissors icon-hover"></i>
-					</button>
+			<div class="flex-container">
+				<div class="landing-page">
+					<h1 class="title">WITAJ W GRZE !</h1>
+					<h2 class="subtitle">Kamień, papier, nożyce</h2>
+					<p>Jest to prosta gra oparta na JavaScript.</p>
+					<p>Kliknij przycisk "URUCHOM GRĘ" aby zacząć.<br>Aby wyświetlić instrukcje,<br>kliknij <i class="far fa-question-circle icon-logo"></i> w prawym, górnym rogu.</p>
+					<button class="button-start">URUCHOM GRĘ</button>
 				</div>
-			</div>
-			<div class="instructions">
-			
+				<div class="game">
+					<div class="result" id="result">10 - 5</div>
+					<div class="messages" id="messages"></div>
+					<div class="buttons" id="buttons">
+						<button class="button-move" id="button-rock">
+							<i class="far fa-hand-rock icon"></i>
+							<i class="fas fa-hand-rock icon-hover "></i>
+						</button>
+						<button class="button-move" id="button-paper">
+							<i class="far fa-hand-paper icon"></i>
+							<i class="fas fa-hand-paper icon-hover "></i>
+						</button>
+						<button class="button-move" id="button-scissors">
+							<i class="far fa-hand-scissors icon"></i>
+							<i class="fas fa-hand-scissors icon-hover"></i>
+						</button>
+					</div>
+				</div>
+				<div class="instructions">
+					<h2 class="title">ZASADY</h2>
+					<p>
+						Gracz wybiera 1 z 3 możliwych ruchów (kamień, papier lub nożyce).<br>
+						<i class="far fa-hand-rock"></i> wygrywa z <i class="far fa-hand-scissors icon"></i><br>
+						<i class="far fa-hand-paper icon"></i> wygrywa z <i class="far fa-hand-rock icon"></i><br>
+						<i class="far fa-hand-scissors icon"></i> wygrywa z <i class="far fa-hand-paper icon"></i><br>
+					</p>
+					<h2 class="title">JAK DZIAŁA GRA</h2>
+					<p>
+						W momencie, gdy gracz wybierze ruch, komputer losuje swój, po czym wyświetla wynik oraz wiadomość.
+					</p>
+					<h2 class="title">PUNKTY</h2>
+					<p>
+						Punkty zapisane są na górze w formacie: <span>X</span> - Y<br>
+						<span>X</span> - wynik gracza<br>
+						Y - wynik komputera
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
-	<footer>
-		
-	</footer>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
