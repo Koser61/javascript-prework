@@ -9,44 +9,49 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
+	<section>
+		<header>
+			<div class="container">
+				<div class="flex-header">
+					<i class="fas fa-gamepad icon-logo"></i>
+					<button class="button-help">
+						<i class="far fa-question-circle icon"></i>
+						<i class="fas fa-question-circle icon-hover"></i>
+					</button>
+				</div>
+			</div>
+		</header>
 		<div class="container">
-			<i class="fas fa-gamepad icon-logo"></i>
-			<button class="button-help">
-				<i class="far fa-question-circle icon"></i>
-				<i class="fas fa-question-circle icon-hover"></i>
-			</button>
-		</div>
-	</header>
-	<div class="container">
-		<div class="landing-page">
-			<h1 class="title">Kamień, papier, nożyce</h1>
-			<h2 class="subtitle">Witaj w grze!</h2>
-			<p>Jest to prosta gra oparta na JavaScript.</p><p>Kliknij przycisk "URUCHOM GRĘ" aby zacząć.<br>Aby wyświetlić instrukcje, kliknij <i class="far fa-question-circle icon"></i> w prawym, górnym rogu.</p>
-			<button class="button-start">URUCHOM GRĘ</button>
-		</div>
-		<div class="game">
-			<div class="result" id="result">10 - 5</div>
-			<div class="messages" id="messages"></div>
-			<div id="buttons">
-				<button class="button-move" id="button-rock">
-					<i class="far fa-hand-rock icon"></i>
-					<i class="fas fa-hand-rock icon-hover "></i>
-				</button>
-				<button class="button-move" id="button-paper">
-					<i class="fa-hand-paper icon far "></i>
-					<i class="fas fa-hand-paper icon-hover "></i>
-				</button>
-				<button class="button-move" id="button-scissors">
-					<i class="far fa-hand-scissors icon"></i>
-					<i class="fas fa-hand-scissors icon-hover"></i>
-				</button>
+			<div class="landing-page">
+				<h1 class="title">Kamień, papier, nożyce</h1>
+				<h2 class="subtitle">Witaj w grze!</h2>
+				<p>Jest to prosta gra oparta na JavaScript.</p>
+				<p>Kliknij przycisk "URUCHOM GRĘ" aby zacząć.<br>Aby wyświetlić instrukcje, kliknij <i class="far fa-question-circle icon-logo"></i> w prawym, górnym rogu.</p>
+				<button class="button-start">URUCHOM GRĘ</button>
+			</div>
+			<div class="game">
+				<div class="result" id="result">10 - 5</div>
+				<div class="messages" id="messages"></div>
+				<div id="buttons">
+					<button class="button-move" id="button-rock">
+						<i class="far fa-hand-rock icon"></i>
+						<i class="fas fa-hand-rock icon-hover "></i>
+					</button>
+					<button class="button-move" id="button-paper">
+						<i class="fa-hand-paper icon far "></i>
+						<i class="fas fa-hand-paper icon-hover "></i>
+					</button>
+					<button class="button-move" id="button-scissors">
+						<i class="far fa-hand-scissors icon"></i>
+						<i class="fas fa-hand-scissors icon-hover"></i>
+					</button>
+				</div>
+			</div>
+			<div class="instructions">
+			
 			</div>
 		</div>
-		<div class="instructions">
-			
-		</div>
-	</div>
+	</section>
 	<footer>
 		
 	</footer>
