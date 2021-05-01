@@ -26,15 +26,10 @@ body {
     color: $color-bright;
 }
 
-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
 .container {
     max-width: 1024px;
     height: 100%;
+    margin: 0 auto;
 }
 
 .flex-container {
@@ -73,7 +68,7 @@ button:hover {
 /* Header */
 
 header {
-    flex: 10%;
+    height: 80px;
     width: 100%;
     background-color: $color-dark;
     padding: 0 24px;
@@ -97,13 +92,12 @@ header {
 
 .landing-page {
     flex: 1;
-    margin: 0 24px;
+    margin: 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    display: none;
     .button-start {
         margin: 24px 0;
         padding: 0 24px;
@@ -119,13 +113,13 @@ header {
 
 .game {
     flex: 1;
-    margin: 0 24px;
-    display: flex;
+    margin: 24px;
+    //display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    //display: none;
+    display: none;
     .result {
         flex: 1;
         width: 100%;
@@ -137,6 +131,8 @@ header {
     .messages {
         flex: 1;
         width: 75%;
+        min-height: 150px;
+        margin-bottom: 24px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -147,9 +143,9 @@ header {
     }
     .buttons {
         flex: 1;
-        width: 75%;
+        width: 100%;
         display: inline-flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
     .button-move {
@@ -166,13 +162,12 @@ header {
 
 .instructions {
     flex: 1;
-    margin: 0 24px;
-    display: flex;
+    margin: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    //display: none;
+    display: none;
     i {
         font-size: 26px;
         margin: 12px;
@@ -185,3 +180,22 @@ header {
 }
 
 /* Responsive */
+
+@media only screen and (max-width: 2560px) {
+    section {
+        height: 100vh;
+    }
+    .flex-container {
+        margin-top: -80px;
+        flex-direction: row;
+    }
+}
+@media only screen and (max-width: 768px) {
+    section {
+        height: fit-content;
+    }
+    .flex-container {
+        margin-top: 0;
+        flex-direction: column;
+    }
+}

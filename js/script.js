@@ -1,9 +1,30 @@
-var buttonTest;
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, argButtonName, buttonPaper, buttonRock, buttonScissors, 
+var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, argButtonName, buttonPaper, buttonRock, buttonScissors, buttonStart, buttonHelp, divGame, divLanding, divInstructions;
 
 buttonPaper = document.getElementById('button-paper');
 buttonRock = document.getElementById('button-rock');
 buttonScissors = document.getElementById('button-scissors');
+buttonStart = document.getElementById('button-start');
+buttonHelp = document.getElementById('button-help');
+divGame = document.getElementById("game");
+divLanding = document.getElementById("landing-page");
+divInstructions = document.getElementById("instructions");
+
+function startGame() {
+  if (divGame.style.display === "none") {
+    divGame.style.display = "flex";
+    divLanding.style.display = "none";
+  } else {
+    divGame.style.display = "none";
+  }
+}
+
+function showInstructions() {
+  if (divInstructions.style.display === "none") {
+    divInstructions.style.display = "flex";
+  } else {
+    divInstructions.style.display = "none";
+  }
+}
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -56,4 +77,10 @@ buttonRock.addEventListener('click', function(){
 });
 buttonScissors.addEventListener('click', function(){ 
   buttonClicked('nożyce'); 
+});
+buttonHelp.addEventListener('click', function (){
+  showInstructions();
+});
+buttonStart.addEventListener('click', function (){
+  startGame();
 });

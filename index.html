@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Kamień, papier, nożyce</title>
 	<script src="https://kit.fontawesome.com/27b932c7ca.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,7 +15,7 @@
 			<div class="container">
 				<div class="flex-header">
 					<a href="index.html"><i class="fas fa-gamepad icon-logo"></i></a>
-					<button class="button-help">
+					<button class="button-help" id="button-help">
 						<i class="far fa-question-circle icon"></i>
 						<i class="fas fa-question-circle icon-hover"></i>
 					</button>
@@ -23,14 +24,14 @@
 		</header>
 		<div class="container">
 			<div class="flex-container">
-				<div class="landing-page">
+				<div class="landing-page" id="landing-page">
 					<h1 class="title">WITAJ W GRZE !</h1>
 					<h2 class="subtitle">Kamień, papier, nożyce</h2>
 					<p>Jest to prosta gra oparta na JavaScript.</p>
 					<p>Kliknij przycisk "URUCHOM GRĘ" aby zacząć.<br>Aby wyświetlić instrukcje,<br>kliknij <i class="far fa-question-circle icon-logo"></i> w prawym, górnym rogu.</p>
-					<button class="button-start">URUCHOM GRĘ</button>
+					<button class="button-start" id="button-start">URUCHOM GRĘ</button>
 				</div>
-				<div class="game">
+				<div class="game" id="game">
 					<div class="result" id="result">10 - 5</div>
 					<div class="messages" id="messages"></div>
 					<div class="buttons" id="buttons">
@@ -48,7 +49,7 @@
 						</button>
 					</div>
 				</div>
-				<div class="instructions">
+				<div class="instructions" id="instructions">
 					<h2 class="title">ZASADY</h2>
 					<p>
 						Gracz wybiera 1 z 3 możliwych ruchów (kamień, papier lub nożyce).<br>
