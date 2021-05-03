@@ -123,6 +123,7 @@ header {
     .result {
         flex: 1;
         width: 100%;
+        min-height: 100px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -182,18 +183,11 @@ header {
 /* Responsive */
 
 @media only screen and (max-width: 2560px) {
-    section {
-        height: 100vh;
-    }
     .flex-container {
-        margin-top: -80px;
         flex-direction: row;
     }
 }
 @media only screen and (max-width: 768px) {
-    section {
-        height: fit-content;
-    }
     .flex-container {
         margin-top: 0;
         flex-direction: column;
