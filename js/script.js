@@ -1,18 +1,15 @@
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, argButtonName, buttonPaper, buttonRock, buttonScissors, buttonStart, buttonHelp, divGame, divLanding, divInstructions;
+const buttonPaper = document.getElementById('button-paper');
+const buttonRock = document.getElementById('button-rock');
+const buttonScissors = document.getElementById('button-scissors');
+const buttonStart = document.getElementById('button-start');
+const buttonHelp = document.getElementById('button-help');
 
-let playerScore = 0,
+let playerScore = 0, 
   computerScore = 0;
-
-buttonPaper = document.getElementById('button-paper');
-buttonRock = document.getElementById('button-rock');
-buttonScissors = document.getElementById('button-scissors');
-buttonStart = document.getElementById('button-start');
-buttonHelp = document.getElementById('button-help');
-divGame = document.getElementById("game");
-divLanding = document.getElementById("landing-page");
-divInstructions = document.getElementById("instructions");
-
+ 
 function startGame() {
+  const divGame = document.getElementById("game");
+  const divLanding = document.getElementById("landing-page");
   if (divGame.style.display === "none") {
     divGame.style.display = "flex";
     divLanding.style.display = "none";
@@ -22,6 +19,7 @@ function startGame() {
 }
 
 function showInstructions() {
+  const divInstructions = document.getElementById("instructions");
   if (divInstructions.style.display === "none") {
     divInstructions.style.display = "flex";
   } else {
@@ -69,11 +67,11 @@ function displayResult(argPlayerMove, argComputerMove, playerScore, computerScor
   printScore(playerScore + ' - ' + computerScore);
 }
 
-playerMove = argButtonName;
+let playerMove = argButtonName;
 console.log('ruch gracza to: ' + playerMove);
-randomNumber = Math.floor(Math.random() * 3 + 1);
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
-computerMove = getMoveName(randomNumber);
+let computerMove = getMoveName(randomNumber);
 console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove, playerScore, computerScore);
 }
