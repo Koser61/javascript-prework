@@ -45,26 +45,29 @@ function getMoveName(argMoveId) {
   }
 }
 
-function displayResult(argPlayerMove, argComputerMove, playerScore, computerScore) {
+function displayResult(argPlayerMove, argComputerMove, argPlayerScore, argComputerScore) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-  console.log('Wczytano playerScore: ' + playerScore + '. Wczytano computerScore: ' + computerScore);
+  console.log('Wczytano argPlayerScore: ' + argPlayerScore + '. Wczytano  argComputerScore: ' +  argComputerScore);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
-    playerScore++;
+    argPlayerScore++;
   } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
     printMessage('Wygrywasz!');
-    playerScore++;
+    argPlayerScore++;
   } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
     printMessage('Wygrywasz!');
-    playerScore++;
-  } else if (playerMove == computerMove) {
+    argPlayerScore++;
+  } else if (argPlayerMove == argComputerMove) {
     printMessage('Remis!');
   } else {
     printMessage('Przegrywasz :(');
-    computerScore++;
+    argComputerScore++;
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-  printScore(playerScore + ' - ' + computerScore);
+  printScore(argPlayerScore + ' - ' + argComputerScore);
+  playerScore = argPlayerScore;
+  computerScore = argComputerScore;
+  console.log('Zwrócono playerScore: '+ playerScore + '|Zwrócono ComputerScore: ' + computerScore);
 }
 
 let playerMove = argButtonName;
