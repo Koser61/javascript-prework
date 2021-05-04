@@ -33,7 +33,7 @@ body {
 }
 
 .flex-container {
-    height: 100%;
+    padding-top: 80px;
     width: 100%;
     display: flex;
 }
@@ -68,6 +68,8 @@ button:hover {
 /* Header */
 
 header {
+    position: absolute;
+    top: 0%;
     height: 80px;
     width: 100%;
     background-color: $color-dark;
@@ -91,6 +93,7 @@ header {
 /* Landing Page */
 
 .landing-page {
+    min-height: 83vh;
     flex: 1;
     margin: 24px;
     display: flex;
@@ -112,9 +115,9 @@ header {
 /* Game */
 
 .game {
+    min-height: 83vh;
     flex: 1;
     margin: 24px;
-    //display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -123,7 +126,7 @@ header {
     .result {
         flex: 1;
         width: 100%;
-        min-height: 100px;
+        min-height: 150px;
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -162,6 +165,7 @@ header {
 /* Instructions */
 
 .instructions {
+    min-height: 83vh;
     flex: 1;
     margin: 24px;
     flex-direction: column;
@@ -189,7 +193,6 @@ header {
 }
 @media only screen and (max-width: 768px) {
     .flex-container {
-        margin-top: 0;
         flex-direction: column;
     }
 }
