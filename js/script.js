@@ -32,7 +32,6 @@ function buttonClicked(argButtonName) {
   console.log(argButtonName + ' został kliknięty');
 
 function getMoveName(argMoveId) {
-  console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
   if (argMoveId == 1) {
     return 'kamień';
   } else if (argMoveId == 2) {
@@ -46,8 +45,6 @@ function getMoveName(argMoveId) {
 }
 
 function displayResult(argPlayerMove, argComputerMove, argPlayerScore, argComputerScore) {
-  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-  console.log('Wczytano argPlayerScore: ' + argPlayerScore + '. Wczytano  argComputerScore: ' +  argComputerScore);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
     argPlayerScore++;
@@ -67,15 +64,11 @@ function displayResult(argPlayerMove, argComputerMove, argPlayerScore, argComput
   printScore(argPlayerScore + ' - ' + argComputerScore);
   playerScore = argPlayerScore;
   computerScore = argComputerScore;
-  console.log('Zwrócono playerScore: '+ playerScore + '|Zwrócono ComputerScore: ' + computerScore);
 }
 
 let playerMove = argButtonName;
-console.log('ruch gracza to: ' + playerMove);
 let randomNumber = Math.floor(Math.random() * 3 + 1);
-console.log('wylosowana liczba to: ' + randomNumber);
 let computerMove = getMoveName(randomNumber);
-console.log('ruch komputera to: ' + computerMove);
 displayResult(playerMove, computerMove, playerScore, computerScore);
 }
 
